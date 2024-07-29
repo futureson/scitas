@@ -1,0 +1,19 @@
+#!/bin/sh
+#SBATCH --nodes 1
+#SBATCH --ntasks 1
+#SBATCH --cpus-per-task 1
+#SBATCH --time 72:00:00
+#SBATCH --mem=80G
+#SBATCH -e slurm-%j.err
+#SBATCH -o slurm-%j.out
+#SBATCH --mail-type=end
+#SBATCH --mail-user=qiming.sun@epfl.ch
+RUN=/scratch/qsun
+cd $RUN/CODE
+
+module load matlab/R2024a
+
+# time matlab -nodisplay -r "mainp('Wheat','CWatM','historical')"; 
+time matlab -nodisplay -r "mainp('Barley','H08','historical')"; 
+
+exit;
