@@ -29,6 +29,14 @@ To install `rsync` for Git Bash terminal, see [here](https://prasaz.medium.com/a
     ```bash
     ssh {user}@jed.epfl.ch
     ```
+- **Add ssh keys to the terminal**:
+
+    [https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+    ```bash
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/id_rsa
+    ``` 
+
 - **Introduction to Linux commands**:
     
     [https://www.epfl.ch/research/facilities/scitas/documentation/training/#intro](https://www.epfl.ch/research/facilities/scitas/documentation/training/#intro)

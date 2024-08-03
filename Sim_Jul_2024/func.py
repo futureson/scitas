@@ -9,7 +9,7 @@ def generate_slurm_script(user, crop, gim, scenario):
 #SBATCH --ntasks 1
 #SBATCH --cpus-per-task 1
 #SBATCH --time 72:00:00
-#SBATCH --mem=80G
+#SBATCH --mem=60G
 #SBATCH -e slurm-%j.err
 #SBATCH -o slurm-%j.out
 #SBATCH --mail-type=end
